@@ -2,9 +2,9 @@
 
 /* ---------- Buttons ---------- */
 .btn {
-  --btn-bg: var(--ink);
+  --btn-bg: var(--blue);
   --btn-fg: var(--white);
-  --btn-bd: var(--ink);
+  --btn-bd: var(--blue);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -45,13 +45,13 @@
 }
 
 .btn-dark:hover {
-  --btn-bg: var(--graphite-3);
-  --btn-bd: var(--graphite-3);
+  --btn-bg: var(--blue-dark);
+  --btn-bd: var(--blue-dark);
   box-shadow: var(--shadow);
 }
 
 .btn-light {
-  --btn-bg: var(--paper);
+  --btn-bg: var(--white);
   --btn-fg: var(--ink);
   --btn-bd: var(--paper);
 }
@@ -74,14 +74,14 @@
 }
 
 .btn-outline {
-  --btn-bg: transparent;
-  --btn-fg: var(--ink);
-  --btn-bd: #cfd2d4;
+  --btn-bg: var(--white);
+  --btn-fg: var(--blue);
+  --btn-bd: #b9cbe3;
 }
 
 .btn-outline:hover {
-  --btn-bd: var(--ink);
-  --btn-bg: var(--white);
+  --btn-bd: var(--blue);
+  --btn-bg: var(--sky-soft);
 }
 
 .btn-sm {
@@ -548,7 +548,7 @@ mark.placeholder {
 .cta-band {
   position: relative;
   background:
-    radial-gradient(60% 140% at 100% 100%, rgba(195, 200, 204, 0.14), transparent 60%),
+    radial-gradient(60% 140% at 100% 100%, rgba(44, 179, 232, 0.35), transparent 60%),
     var(--graphite);
   color: var(--white);
   padding-block: clamp(3.5rem, 2.5rem + 4vw, 6rem);

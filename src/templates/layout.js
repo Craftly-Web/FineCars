@@ -33,7 +33,7 @@ function head(ctx, p) {
 <meta name="description" content="${p.description}">
 <meta name="robots" content="${noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'}">
 ${canonical ? html`<link rel="canonical" href="${canonical}">` : ''}
-<meta name="theme-color" content="#111315">
+<meta name="theme-color" content="#ffffff">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
@@ -74,7 +74,7 @@ ${isPreview(ctx) ? html`<div class="demo-bar" role="note">${icon('info', { size:
 <nav class="main-nav" aria-label="Hauptnavigation"><ul>${navItems}</ul></nav>
 <div class="header-actions">
 <a class="header-phone" href="${c.phoneHref}">${icon('phone', { size: 18 })}<span>${c.phone}</span></a>
-<a class="btn btn-light btn-sm header-cta" href="/fahrzeuge/">Fahrzeuge entdecken</a>
+<a class="btn btn-dark btn-sm header-cta" href="/fahrzeuge/">Fahrzeuge entdecken</a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
 <span class="menu-toggle-open">${icon('menu', { size: 24 })}</span><span class="menu-toggle-close">${icon('close', { size: 24 })}</span><span class="visually-hidden" data-menu-label>Menü öffnen</span>
 </button>
@@ -84,8 +84,8 @@ ${isPreview(ctx) ? html`<div class="demo-bar" role="note">${icon('info', { size:
 <nav aria-label="Mobile Navigation" class="container">
 <ul>${NAV.map(n => html`<li><a href="${n.href}"${p.path.startsWith(n.href) ? raw(' aria-current="page"') : ''}>${n.label}${icon('arrowRight', { size: 22 })}</a></li>`)}</ul>
 <div class="mobile-nav-actions">
-<a class="btn btn-light btn-block" href="/fahrzeuge/">Fahrzeuge entdecken</a>
-<a class="btn btn-ghost-light btn-block" href="${c.phoneHref}">${icon('phone', { size: 18 })} ${c.phone}</a>
+<a class="btn btn-dark btn-block" href="/fahrzeuge/">Fahrzeuge entdecken</a>
+<a class="btn btn-outline btn-block" href="${c.phoneHref}">${icon('phone', { size: 18 })} ${c.phone}</a>
 </div>
 <p class="mobile-nav-address">${c.street} · ${c.zip} ${c.city}</p>
 </nav>

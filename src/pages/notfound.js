@@ -10,8 +10,8 @@ export default function notFound(ctx) {
 <h1 class="page-title">Diese Seite wurde nicht gefunden.</h1>
 <p class="page-lead">Möglicherweise wurde das Fahrzeug bereits verkauft oder die Adresse hat sich geändert. Gern helfen wir Ihnen weiter.</p>
 <div class="hero-actions">
-<a class="btn btn-light btn-lg" href="/fahrzeuge/">Fahrzeuge entdecken ${icon('arrowRight', { size: 20 })}</a>
-<a class="btn btn-ghost-light btn-lg" href="/">Zur Startseite</a>
+<a class="btn btn-dark btn-lg" href="/fahrzeuge/">Fahrzeuge entdecken ${icon('arrowRight', { size: 20 })}</a>
+<a class="btn btn-outline btn-lg" href="/">Zur Startseite</a>
 </div>
 <p class="not-found-phone">Oder rufen Sie uns an: <a href="${c.phoneHref}">${c.phone}</a></p>
 </div>

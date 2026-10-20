@@ -65,7 +65,7 @@ export async function build({ quiet = false } = {}) {
   const assetVersion = hash.digest('hex').slice(0, 10);
 
   // Illustrationen
-  await write('assets/img/hero-car.svg', heroSvg({ body: 'limousine', paint: '#a7aeb5' }));
+  await write('assets/img/hero-car.svg', heroSvg({ body: 'limousine', paint: '#b4bcc5', dark: false }));
   for (const v of vehicles) {
     if (!v.demoArt) continue;
     for (let i = 0; i < 4; i++) {

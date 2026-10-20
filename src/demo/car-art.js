@@ -229,12 +229,12 @@ ${showLabel ? `<text x="150" y="${H - 50}" font-family="Inter, Arial, sans-serif
 }
 
 /** Großes Hero-Motiv auf dunklem Studiohintergrund, Fahrzeug blickt nach links. */
-export function heroSvg({ body = 'limousine', paint = '#9aa1a8' } = {}) {
+export function heroSvg({ body = 'limousine', paint = '#9aa1a8', dark = true } = {}) {
   const w = 1600;
   const h = 900;
   const id = 'h';
-  const car = carGroup({ body, paint, id, dark: true });
-  const carR = carGroup({ body, paint, id: 'hr', dark: true });
+  const car = carGroup({ body, paint, id, dark });
+  const carR = carGroup({ body, paint, id: 'hr', dark });
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="190 370 1140 480" width="1140" height="480">
 <defs>
 <radialGradient id="hs" cx=".55" cy=".58" r=".55">

@@ -51,36 +51,16 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  color: var(--white);
-  transition: background-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
-}
-
-.site-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to bottom, rgba(17, 19, 21, 0.7), rgba(17, 19, 21, 0));
-  transition: opacity 0.3s var(--ease);
+  color: var(--ink);
+  background: var(--white);
+  /* Hellblauer Streifen wie an der Fassade des Firmensitzes */
+  border-bottom: 4px solid var(--sky);
+  transition: box-shadow 0.3s var(--ease);
 }
 
 .site-header.is-scrolled,
 .site-header.is-open {
-  background: rgba(17, 19, 21, 0.94);
-  box-shadow: 0 1px 0 var(--line-dark);
-}
-
-@supports (backdrop-filter: blur(1px)) {
-  .site-header.is-scrolled {
-    background: rgba(17, 19, 21, 0.82);
-    backdrop-filter: saturate(140%) blur(14px);
-    -webkit-backdrop-filter: saturate(140%) blur(14px);
-  }
-}
-
-.site-header.is-scrolled::before,
-.site-header.is-open::before {
-  opacity: 0;
+  box-shadow: 0 10px 30px -18px rgba(15, 42, 79, 0.45);
 }
 
 .header-inner {
@@ -94,7 +74,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  color: var(--white);
+  color: var(--brand);
   text-decoration: none;
   flex: none;
 }
@@ -110,9 +90,9 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--silver);
+  color: var(--blue);
   padding-left: 0.75rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  border-left: 1px solid var(--line);
   line-height: 1.2;
 }
 
@@ -133,7 +113,7 @@
   font-size: var(--fs-sm);
   font-weight: 500;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
   transition: color 0.2s var(--ease);
 }
 
@@ -152,7 +132,7 @@
 
 .main-nav a:hover,
 .main-nav a[aria-current='page'] {
-  color: var(--white);
+  color: var(--blue);
 }
 
 .main-nav a:hover::after,
@@ -172,13 +152,14 @@
   gap: 0.5rem;
   font-size: var(--fs-sm);
   font-weight: 500;
-  color: var(--silver);
+  color: var(--blue);
+  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
 }
 
 .header-phone:hover {
-  color: var(--white);
+  color: var(--blue-dark);
 }
 
 .menu-toggle {
@@ -187,10 +168,10 @@
   height: 44px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: transparent;
-  color: var(--white);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .menu-toggle-close {
@@ -208,10 +189,9 @@
 .mobile-nav {
   position: fixed;
   inset: calc(var(--header-h) + var(--demo-h)) 0 0;
-  background: var(--ink);
+  background: var(--white);
   overflow-y: auto;
   padding-block: 1rem 2rem;
-  border-top: 1px solid var(--line-dark);
 }
 
 .mobile-nav ul {
@@ -223,17 +203,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.1rem 0;
-  border-bottom: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line);
   font-family: var(--font-head);
   font-size: 1.625rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   text-decoration: none;
-  color: var(--white);
+  color: var(--ink);
 }
 
 .mobile-nav li a[aria-current='page'] {
-  color: var(--silver);
+  color: var(--blue);
 }
 
 .mobile-nav-actions {
@@ -244,7 +224,7 @@
 
 .mobile-nav-address {
   margin-top: 1.5rem;
-  color: var(--mute);
+  color: var(--mute-dark);
   font-size: var(--fs-sm);
 }
 
@@ -257,7 +237,7 @@
     width: 44px;
     height: 44px;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--line);
     border-radius: 999px;
   }
 }
@@ -353,15 +333,15 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--mute-dark);
+  color: var(--blue);
 }
 
 .eyebrow::before {
   content: '';
   width: 28px;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.6;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--sky);
 }
 
 .eyebrow-light,
@@ -373,20 +353,25 @@
 .page-intro {
   position: relative;
   background:
-    radial-gradient(70% 120% at 85% 0%, rgba(195, 200, 204, 0.12), transparent 60%),
-    var(--ink);
-  color: var(--white);
+    linear-gradient(180deg, var(--white) 0%, var(--paper) 100%);
+  color: var(--ink);
   padding-top: calc(var(--header-h) + var(--demo-h) + clamp(1.5rem, 1rem + 2vw, 3rem));
   padding-bottom: clamp(2.5rem, 2rem + 3vw, 5rem);
   overflow: hidden;
+  border-bottom: 1px solid var(--line);
 }
 
+/* Blaue Fassadenstreifen als dezentes Gestaltungselement */
 .page-intro::after {
   content: '';
   position: absolute;
-  inset: auto 0 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(195, 200, 204, 0.35), transparent);
+  right: 0;
+  bottom: clamp(2.5rem, 2rem + 3vw, 5rem);
+  width: min(38vw, 520px);
+  height: 14px;
+  border-radius: 7px 0 0 7px;
+  background: linear-gradient(90deg, var(--sky), #5cc8f0);
+  box-shadow: 0 22px 0 -16px var(--blue);
 }
 
 .page-intro-grid {
@@ -399,13 +384,22 @@
 .page-title {
   font-size: var(--fs-2xl);
   max-width: 18ch;
+  color: var(--ink);
 }
 
 .page-lead {
   margin-top: 1.25rem;
   max-width: 40rem;
   font-size: var(--fs-md);
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--mute-dark);
+}
+
+@media (max-width: 700px) {
+  .page-intro::after {
+    width: 40vw;
+    height: 8px;
+    bottom: 1.25rem;
+  }
 }
 
 /* ---------- Brotkrumen ---------- */
@@ -466,6 +460,10 @@
 .footer-brand p {
   margin-top: 1.25rem;
   max-width: 22rem;
+}
+
+.brand-footer {
+  color: var(--white);
 }
 
 .brand-footer .logo-svg {

@@ -17,8 +17,8 @@ function hero(ctx) {
 <h1 id="hero-title" class="hero-title">Fahrzeuge, die zu Ihnen&nbsp;passen.</h1>
 <p class="hero-lead">Entdecken Sie unsere aktuellen Fahrzeugangebote und nehmen Sie direkt Kontakt mit FineCars in Görlitz auf.</p>
 <div class="hero-actions">
-<a class="btn btn-light btn-lg" href="/fahrzeuge/">Fahrzeuge entdecken ${icon('arrowRight', { size: 20 })}</a>
-<a class="btn btn-ghost-light btn-lg" href="/kontakt/">Kontakt aufnehmen</a>
+<a class="btn btn-dark btn-lg" href="/fahrzeuge/">Fahrzeuge entdecken ${icon('arrowRight', { size: 20 })}</a>
+<a class="btn btn-outline btn-lg" href="/kontakt/">Kontakt aufnehmen</a>
 </div>
 <form class="quick-search" action="/fahrzeuge/" method="get" role="search" aria-label="Schnellsuche">
 <div class="quick-field">

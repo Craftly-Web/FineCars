@@ -85,7 +85,7 @@ export function pageIntro({ eyebrow, title, lead, crumbs, aside }) {
 ${crumbs ? breadcrumbs(crumbs) : ''}
 <div class="page-intro-grid">
 <div>
-${eyebrow ? html`<p class="eyebrow eyebrow-light">${eyebrow}</p>` : ''}
+${eyebrow ? html`<p class="eyebrow">${eyebrow}</p>` : ''}
 <h1 class="page-title">${title}</h1>
 ${lead ? html`<p class="page-lead">${lead}</p>` : ''}
 </div>

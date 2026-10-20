@@ -18,19 +18,25 @@
 
 :root {
   /* Farben */
-  --ink: #111315;
-  --graphite: #1b1e21;
-  --graphite-2: #23272b;
-  --graphite-3: #2e3338;
-  --paper: #f5f5f2;
+  /* Angelehnt an den Firmensitz: weiße/silberne Fassade, hellblaue
+     Fassadenstreifen, königsblaue Schrift und Säulen */
+  --ink: #0f2a4f;        /* Dunkelblau: Text und dunkle Flächen */
+  --graphite: #164a96;   /* Blau, dunkel: Bänder und Akzentflächen */
+  --graphite-2: #1a56ad;
+  --graphite-3: #2468c8;
+  --blue: #1d5fbf;       /* Königsblau (Schriftzug) – Buttons, Links */
+  --blue-dark: #164a96;
+  --sky: #2cb3e8;        /* Hellblau (Fassadenstreifen) */
+  --sky-soft: #e3f4fc;
+  --paper: #f1f4f8;      /* Silberweiß */
   --white: #ffffff;
-  --mute: #8d9399;
-  --mute-dark: #5f666c; /* Fließtext-Grau auf hellem Grund (AA) */
-  --silver: #c3c8cc;
-  --silver-2: #dfe2e4;
-  --line: #e3e4e0;
-  --line-dark: rgba(255, 255, 255, 0.1);
-  --brand: #1e8ae5; /* Logofarbe */
+  --mute: #8a97a8;
+  --mute-dark: #526073;  /* Fließtext-Grau auf hellem Grund (AA) */
+  --silver: #bfe3f6;     /* helle Akzentfarbe auf dunklem Grund */
+  --silver-2: #dde3ea;
+  --line: #dde3ea;
+  --line-dark: rgba(255, 255, 255, 0.14);
+  --brand: #1e8ae5;      /* Logofarbe */
   --danger: #b3261e;
   --success: #1f6f43;
   --warn-bg: #fff6df;
@@ -56,9 +62,9 @@
   --radius-lg: 16px;
 
   /* Effekte */
-  --shadow-sm: 0 1px 2px rgba(17, 19, 21, 0.06);
-  --shadow: 0 10px 30px -12px rgba(17, 19, 21, 0.18);
-  --shadow-lg: 0 30px 60px -24px rgba(17, 19, 21, 0.35);
+  --shadow-sm: 0 1px 2px rgba(15, 42, 79, 0.06);
+  --shadow: 0 10px 30px -12px rgba(15, 42, 79, 0.2);
+  --shadow-lg: 0 30px 60px -24px rgba(15, 42, 79, 0.32);
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --header-h: 76px;
   --demo-h: 0px;
